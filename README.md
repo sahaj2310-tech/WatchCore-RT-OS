@@ -3,6 +3,24 @@
 [![CI](https://github.com/sahaj2310-tech/WatchCore-RT-OS/actions/workflows/ci.yml/badge.svg)](https://github.com/sahaj2310-tech/WatchCore-RT-OS/actions/workflows/ci.yml)
 [![License: Source-Available (No-Modify)](https://img.shields.io/badge/License-Source--Available%20(No--Modify)-orange.svg)](LICENSE)
 ![Platform: Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D6)
+![Top language](https://img.shields.io/github/languages/top/sahaj2310-tech/WatchCore-RT-OS)
+![Status: Complete](https://img.shields.io/badge/Status-Complete-brightgreen)
+![PRs: not accepted](https://img.shields.io/badge/PRs-not%20accepted-red)
+
+![Stars](https://img.shields.io/github/stars/sahaj2310-tech/WatchCore-RT-OS?style=social)
+![Forks](https://img.shields.io/github/forks/sahaj2310-tech/WatchCore-RT-OS?style=social)
+![Last commit](https://img.shields.io/github/last-commit/sahaj2310-tech/WatchCore-RT-OS)
+![Repo size](https://img.shields.io/github/repo-size/sahaj2310-tech/WatchCore-RT-OS)
+![Code size](https://img.shields.io/github/languages/code-size/sahaj2310-tech/WatchCore-RT-OS)
+
+![FreeRTOS](https://img.shields.io/badge/RTOS-FreeRTOS-44a833)
+![C](https://img.shields.io/badge/Kernel-C-00599C?logo=c&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
+![WebSocket](https://img.shields.io/badge/Transport-WebSocket-010101)
 
 A fault-tolerant **FreeRTOS** supervisor for a simulated **4-spacecraft constellation**,
 fronted by a **TypeScript orchestrator** (Express + WebSocket + SQLite) and a
