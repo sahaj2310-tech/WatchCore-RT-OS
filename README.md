@@ -1,7 +1,7 @@
 # WatchCore RTOS — Mission Operations Platform
 
-[![CI](https://github.com/sahajsinhasub23-commits/WatchCore-RT/actions/workflows/ci.yml/badge.svg)](https://github.com/sahajsinhasub23-commits/WatchCore-RT/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/sahaj2310-tech/WatchCore-RT-OS/actions/workflows/ci.yml/badge.svg)](https://github.com/sahaj2310-tech/WatchCore-RT-OS/actions/workflows/ci.yml)
+[![License: Source-Available (No-Modify)](https://img.shields.io/badge/License-Source--Available%20(No--Modify)-orange.svg)](LICENSE)
 ![Platform: Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D6)
 
 A fault-tolerant **FreeRTOS** supervisor for a simulated **4-spacecraft constellation**,
@@ -66,8 +66,8 @@ fronted by a **TypeScript orchestrator** (Express + WebSocket + SQLite) and a
 ### Step 1 — Get the code
 
 ```bat
-git clone https://github.com/sahajsinhasub23-commits/WatchCore-RT.git
-cd WatchCore-RT
+git clone https://github.com/sahaj2310-tech/WatchCore-RT-OS.git
+cd WatchCore-RT-OS
 ```
 
 (Or download the ZIP from GitHub and extract it.)
@@ -231,8 +231,8 @@ critical sections. The new `Benchmarks` module adds:
 `vSemaphoreDelete`, `xTaskGetIdleTaskHandle`, `xTaskGetHandle`,
 `vTaskSuspend`, `vTaskResume`.
 
-A complete cross-reference of every API and its call site is in
-[`docs/RTOS_APIS.md`](#) — or simply grep `src/`.
+A complete cross-reference of every API and its call site is in the
+[Technical Report](docs/TECHNICAL_REPORT.md) — or simply grep `src/`.
 
 ---
 
@@ -280,9 +280,9 @@ A complete cross-reference of every API and its call site is in
 ├── build.bat                ← build the C simulator only
 ├── CMakeLists.txt
 ├── CMakePresets.json
-├── LICENSE                  ← MIT (WatchCore code)
+├── LICENSE                  ← Source-Available, no-modify (WatchCore code)
 ├── README.md                ← this file
-├── TECHNICAL_REPORT.md · USER_GUIDE.md
+├── docs/                    ← TECHNICAL_REPORT.md · USER_GUIDE.md
 ├── .github/workflows/ci.yml ← Windows build + web type-check CI
 ├── include/                 ← public C headers
 ├── src/                     ← FreeRTOS C application (19 modules)
@@ -348,7 +348,7 @@ tests\run_tests.bat
 
 ---
 
-## 9. Notes for the reviewer
+## 9. Implementation notes
 
 - **No magic** — every piece of telemetry on the dashboard maps to a real
   field in the C application's SSE frame. The full JSON shape is in
@@ -371,8 +371,14 @@ tests\run_tests.bat
 
 ## 10. License
 
-WatchCore application code is released under the **MIT License** — see
-[`LICENSE`](LICENSE). The FreeRTOS Kernel (auto-downloaded into `FreeRTOS-Kernel/`)
-is a separate work, also MIT-licensed, by Amazon.com, Inc. — see
-`FreeRTOS-Kernel/LICENSE.md` after it has been fetched, or
-<https://github.com/FreeRTOS/FreeRTOS-Kernel>.
+WatchCore application code is **source-available** under a custom
+no-modification license — see [`LICENSE`](LICENSE). In short: you may **view,
+download, and run** the unmodified Software for personal, educational, or
+evaluation use. You may **not** modify it, create derivative works, or
+redistribute it without prior written permission. The source is published for
+transparency and use, **not** as open source.
+
+The FreeRTOS Kernel (auto-downloaded into `FreeRTOS-Kernel/`) is a separate
+work, MIT-licensed by Amazon.com, Inc. — see `FreeRTOS-Kernel/LICENSE.md` after
+it has been fetched, or <https://github.com/FreeRTOS/FreeRTOS-Kernel>.
+Third-party npm packages under `web/` remain governed by their own licenses.

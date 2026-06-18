@@ -47,7 +47,7 @@ Our project does exactly this. It is built on **FreeRTOS**, which is a famous
 **Real-Time Operating System** (RTOS). An RTOS is a small operating system
 used inside machines like satellites, cars, medical devices, and robots.
 
-The main idea from the assignment is this sentence:
+The core idea behind WatchCore is this sentence:
 
 > The operating system works as a **"resource manager + safety manager"**.
 
@@ -102,7 +102,7 @@ The project has **three layers**. Think of it like three floors of a building.
 ### Why three layers?
 
 - **Layer 1** is the *real* RTOS work. This is the C code with FreeRTOS. It is
-  the heart of the project and answers the assignment.
+  the heart of the project.
 - **Layer 2** is a helper. The RTOS program runs on Windows, not real space
   hardware, so the orchestrator launches four copies and collects their data.
 - **Layer 3** makes everything **visible and beautiful** so a person can watch
@@ -281,10 +281,10 @@ itself. Up to 8 different recovery tasks can exist:
 | `MemRec`   | Low memory | UART | 0.65 s |
 | `CommRec`  | Lost communication | UART | 1.0 s |
 
-### 5.3 Why dynamic tasks? (this is important for the assignment)
+### 5.3 Why dynamic tasks?
 
-The assignment asks us to understand **"condition-based dynamic task creation
-and termination."** This means: create a task only when a condition (a fault)
+A central design goal is **condition-based dynamic task creation
+and termination.** This means: create a task only when a condition (a fault)
 happens, and delete it when it is no longer needed.
 
 Why do it this way instead of keeping all tasks alive forever?
@@ -361,8 +361,8 @@ chooses SAFE (the more serious one), not EMERGENCY.
 ## 8. How the watchdog works
 
 A **watchdog** is a safety guard. Its job is to notice when a task has
-**frozen** (stopped working) and to **restart** it. This answers the
-assignment part "Watchdog and Stability."
+**frozen** (stopped working) and to **restart** it. This implements the
+**Watchdog and Stability** behaviour.
 
 ### 8.1 The idea: heartbeats
 
@@ -459,8 +459,8 @@ human help.
 
 ### 9.2 What a recovery task does (the 7-step lifecycle)
 
-Every recovery task follows the same careful steps. These steps directly
-match the assignment's "task creation and closing policies":
+Every recovery task follows the same careful steps. These steps follow
+clear **task creation and closing policies**:
 
 ```
 1. Wait for a "go" signal             (ulTaskNotifyTakeIndexed)
@@ -472,7 +472,7 @@ match the assignment's "task creation and closing policies":
 7. Clear the fault and delete itself   (EventManager_ClearFault + vTaskDelete)
 ```
 
-Two of these steps are special and were asked for directly in the assignment:
+Two of these steps are especially important:
 
 - **Down-prioritize when returning to normal** (step 5). While fixing the
   problem, the task is very important (high priority). After the job is done,
@@ -773,7 +773,7 @@ feature on top of the RTOS data.
 
 ### 13.5 Correlation analysis
 
-The assignment asks for "correlation analysis between CPU, memory, and battery."
+WatchCore performs correlation analysis between CPU, memory, and battery.
 The orchestrator keeps the last 60 readings and computes the **Pearson
 correlation coefficient (r)** between pairs of signals:
 
@@ -1305,5 +1305,5 @@ a modern React dashboard shows everything live with an animated orbital map, a
 sensor radar, the scheduler lanes, an energy panel, scripted mission scenarios,
 and an analytics page.
 
-It demonstrates, in one working system, the central idea of the assignment:
+It demonstrates, in one working system, the central idea:
 **the operating system as both a resource manager and a safety manager.**

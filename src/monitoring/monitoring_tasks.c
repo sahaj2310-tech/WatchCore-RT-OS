@@ -95,8 +95,8 @@ void MonitoringTasks_CpuEntry(void *pvParameters) {
 }
 
 /* ---------------------------------------------------------------
- * StackMon: dedicated always-on stack-usage monitor (the
- * assignment lists "Heap/Stack Usage Monitoring Tasks"). Sweeps
+ * StackMon: dedicated always-on stack-usage monitor
+ * ("Heap/Stack Usage Monitoring"). Sweeps
  * every task's stack high-water mark, publishes the worst-case
  * headroom, and warns if any task runs dangerously low.
  * ------------------------------------------------------------- */
@@ -259,7 +259,7 @@ void MonitoringTasks_SensorEntry(void *pvParameters) {
 
 /* ---------------------------------------------------------------
  * CommWatch: always-on "communication delay / unresponsive"
- * detection task (required by the assignment). It watches the
+ * detection task. It watches the
  * latest comm signal; if it stays below threshold for
  * COMM_LOSS_STREAK consecutive checks it raises FAULT_COMM_TIMEOUT,
  * and clears it once the link recovers.

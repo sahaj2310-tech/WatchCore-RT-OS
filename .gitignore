@@ -34,6 +34,15 @@ yarn-error.log*
 *.log
 *.err
 
+# --- Python (venv / caches) ---
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
 # --- OS / editor cruft ---
 .DS_Store
 Thumbs.db
@@ -41,9 +50,10 @@ desktop.ini
 *.swp
 *~
 
-# --- Local editor/tooling state (keep shared .vscode config, ignore personal) ---
-.vscode/*.log
+# --- Local editor/tooling state ---
+.vscode/
 .idea/
+.claude/
 
 # --- Environment / secrets (none in repo today; guard against future leaks) ---
 .env

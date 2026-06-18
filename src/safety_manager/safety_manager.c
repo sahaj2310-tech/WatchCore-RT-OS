@@ -35,7 +35,7 @@ static void SetLoadShed(bool shed) {
 /* ============================================================
  * SafetyManager - the supervisory "safety manager" task.
  *
- * The assignment objective frames the OS as
+ * WatchCore frames the OS as a
  *   "resource manager + safety manager".
  * This always-on task implements the safety-manager half:
  *   - aggregates resource health (heap, stack, CPU headroom)

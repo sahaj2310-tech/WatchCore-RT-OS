@@ -1,31 +1,66 @@
-MIT License
+WatchCore RTOS — Source-Available License (No-Modification)
+Copyright (c) 2026 Sahaj Sinha. All rights reserved.
 
-Copyright (c) 2026 Sahaj Sinha
+This software and its source code (the "Software") are made publicly
+viewable for evaluation, learning, and use. They are NOT open source and
+are NOT in the public domain. The copyright holder retains all rights not
+expressly granted below.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+-----------------------------------------------------------------------------
+1. GRANT OF RIGHTS
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Subject to the conditions below, you are granted a worldwide, royalty-free,
+non-exclusive, non-transferable, revocable license to:
+
+  (a) view and read the source code;
+  (b) download a personal copy; and
+  (c) install and run the Software in unmodified form for your own personal,
+      educational, internal, or evaluation purposes.
+
+-----------------------------------------------------------------------------
+2. RESTRICTIONS
+
+Except with the prior written permission of the copyright holder, you MAY NOT:
+
+  (a) modify, adapt, translate, or create derivative works of the Software,
+      in whole or in part;
+  (b) redistribute, publish, sublicense, lease, sell, or otherwise make the
+      Software (modified or unmodified) available to any third party;
+  (c) remove, obscure, or alter this license, the copyright notice, or any
+      attribution contained in the Software;
+  (d) represent the Software, or any part of it, as your own work.
+
+Submitting a contribution (e.g. a pull request) is permitted only as a
+proposal to the copyright holder, who may incorporate it at their sole
+discretion; doing so grants the copyright holder a perpetual, irrevocable,
+royalty-free license to that contribution.
+
+-----------------------------------------------------------------------------
+3. SCOPE
+
+This license covers the WatchCore RTOS application code authored in this
+repository: src/, include/, web/, tests/, the documentation in docs/ and
+README.md, and the build/setup scripts.
+
+The FreeRTOS Kernel, fetched automatically into FreeRTOS-Kernel/ by the setup
+script, is a separate work distributed under its own MIT license by
+Amazon.com, Inc. or its affiliates. See
+https://github.com/FreeRTOS/FreeRTOS-Kernel and FreeRTOS-Kernel/LICENSE.md.
+
+Third-party npm packages used by web/ are governed by their own licenses, as
+declared in their respective package metadata. Nothing in this license alters
+your rights or obligations under those licenses.
+
+-----------------------------------------------------------------------------
+4. DISCLAIMER OF WARRANTY AND LIABILITY
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
+OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----------------------------------------------------------------------------
-
-This license covers the WatchCore RTOS application code authored in this
-repository (src/, include/, web/, tests/, and the build/setup scripts).
-
-The FreeRTOS Kernel, fetched automatically into FreeRTOS-Kernel/ by the setup
-script, is a separate work distributed under its own MIT license by Amazon.com,
-Inc. or its affiliates. See https://github.com/FreeRTOS/FreeRTOS-Kernel for the
-authoritative source and FreeRTOS-Kernel/LICENSE.md once it has been fetched.
+For permissions beyond the scope of this license — including modification,
+redistribution, or commercial use — contact the copyright holder.

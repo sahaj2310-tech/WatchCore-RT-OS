@@ -1,9 +1,8 @@
 import type { RtosFrame } from "./types.js";
 
 /* ============================================================
- * Correlation analysis  (assignment requirement:
- * "Correlation analysis between CPU, memory, and battery
- *  health and task management")
+ * Correlation analysis between CPU, memory, and battery
+ * health and task management.
  *
  * Maintains a rolling window per craft and computes Pearson
  * correlation coefficients between the key health signals.

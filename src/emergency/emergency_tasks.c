@@ -16,8 +16,8 @@
  *
  * Every recoverable fault has a descriptor below. When the event
  * manager reports the fault, EmergencyTasks_Create() spawns a
- * single high-priority recovery task for it. The task follows the
- * assignment's required lifecycle:
+ * single high-priority recovery task for it. The task follows a
+ * strict recovery lifecycle:
  *   1. wait for go-signal (task notification)
  *   2. raise priority while mitigating
  *   3. hold a power token (counting semaphore)
@@ -94,12 +94,12 @@ static void GenericRecoveryTask(void *pvParameters) {
 
     if (gotPower) PowerManager_Release();
 
-    /* 5. DOWN-PRIORITIZE on return to normal (assignment requirement) */
+    /* 5. DOWN-PRIORITIZE on return to normal (per spec) */
     vTaskPrioritySet(NULL, PRIO_MONITOR);
 
     Log_Event(LOG_INFO, r->logTag, StateMachine_GetMode(), "Complete", r->doneMsg);
 
-    /* 6. RETAIN state history before deletion (assignment requirement) */
+    /* 6. RETAIN state history before deletion (per spec) */
     RetainStateSnapshot(r, origPrio);
 
     /* 7. clear fault + self-delete */
